@@ -66,15 +66,14 @@ public class Functionals {
 			if (result == null) {
 				result = arg;
 			} else {
-				int r = result.compareTo(arg);
-				if (r < 0) {
+				if (result.compareTo(arg) < 0) {
 					result = arg;
 				}
 			}
 		}
 		return result;
 	}
-	
+
 	// min
 	public static <T extends Comparable<T>> T min(T[] args) {
 		return min(Arrays.asList(args));
@@ -91,8 +90,7 @@ public class Functionals {
 			if (result == null) {
 				result = arg;
 			} else {
-				int r = result.compareTo(arg);
-				if (r > 0) {
+				if (result.compareTo(arg) > 0) {
 					result = arg;
 				}
 			}
